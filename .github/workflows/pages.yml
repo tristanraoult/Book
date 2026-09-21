@@ -16,6 +16,7 @@ concurrency:
 
 jobs:
   deploy:
+    runs-on: ubuntu-latest
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
@@ -24,7 +25,9 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/configure-pages@v5
       - name: Prepare static site
-        run: node scripts/prepare-pages.mjs
+        run: |
+          node scripts/prepare-pages.mjs
+          node scripts/validate-pages.mjs
       - uses: actions/upload-pages-artifact@v3
         with:
           path: _site
