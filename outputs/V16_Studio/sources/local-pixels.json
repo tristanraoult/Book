@@ -1,0 +1,26 @@
+[
+  {
+    "file": "00_Fond_depart_vide_16x9.png",
+    "raw_sha256": "49e3dc6b6b60e0b9fff2d77a67fe197b2d79e14fb391d24d67134d1dfe4afb49"
+  },
+  {
+    "file": "02_Entree_16x9.png",
+    "raw_sha256": "b3b062731ac51b926fa10e3b0c969b3647d0a5137b3705228f820f79dee530a1"
+  },
+  {
+    "file": "03_Atelier_16x9.png",
+    "raw_sha256": "5bb3859b9dd96b5d544464b6534e2d2e0d096e825664ff676df40911b09a0c09"
+  },
+  {
+    "file": "00_Fond_depart_vide_9x16.png",
+    "raw_sha256": "36e57bc25f0272851ca702fc469247ed71537655ce4e268812e1745b4fe4f78d"
+  },
+  {
+    "file": "02_Entree_9x16.png",
+    "raw_sha256": "ba5c53218338cd7260593dae24c4164dd9fd534af899f589be666bcced2f18cb"
+  },
+  {
+    "file": "03_Atelier_9x16.png",
+    "raw_sha256": "dce37f1f03aa6faf2e8cf57316e5ade666a269a7bf09de1268e2a56a4f326b1e"
+  }
+]

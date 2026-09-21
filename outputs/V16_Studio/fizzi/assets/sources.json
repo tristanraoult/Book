@@ -1,0 +1,250 @@
+[
+  {
+    "url": "https://tristanraoult.com/assets/images/fizzi/cans-group.png",
+    "name": "cans-group.png",
+    "width": 6262,
+    "height": 3495,
+    "alpha": true,
+    "bytes": 9162102
+  },
+  {
+    "url": "https://tristanraoult.com/assets/images/fizzi/color-1.png",
+    "name": "color-1.png",
+    "width": 3133,
+    "height": 1934,
+    "alpha": true,
+    "bytes": 88872
+  },
+  {
+    "url": "https://tristanraoult.com/assets/images/fizzi/color-2.png",
+    "name": "color-2.png",
+    "width": 3132,
+    "height": 1931,
+    "alpha": true,
+    "bytes": 81260
+  },
+  {
+    "url": "https://tristanraoult.com/assets/images/fizzi/color-3.png",
+    "name": "color-3.png",
+    "width": 3133,
+    "height": 1959,
+    "alpha": true,
+    "bytes": 90437
+  },
+  {
+    "url": "https://tristanraoult.com/assets/images/fizzi/color-4.png",
+    "name": "color-4.png",
+    "width": 3132,
+    "height": 1959,
+    "alpha": true,
+    "bytes": 90819
+  },
+  {
+    "url": "https://tristanraoult.com/assets/images/fizzi/typography.png",
+    "name": "typography.png",
+    "width": 5083,
+    "height": 2290,
+    "alpha": true,
+    "bytes": 227857
+  },
+  {
+    "url": "https://tristanraoult.com/assets/images/fizzi/logo-green.png",
+    "name": "logo-green.png",
+    "width": 3133,
+    "height": 1993,
+    "alpha": true,
+    "bytes": 134715
+  },
+  {
+    "url": "https://tristanraoult.com/assets/images/fizzi/logo-blue.png",
+    "name": "logo-blue.png",
+    "width": 3132,
+    "height": 1958,
+    "alpha": true,
+    "bytes": 132498
+  },
+  {
+    "url": "https://tristanraoult.com/assets/images/fizzi/logo-orange.png",
+    "name": "logo-orange.png",
+    "width": 3132,
+    "height": 1959,
+    "alpha": true,
+    "bytes": 129812
+  },
+  {
+    "url": "https://tristanraoult.com/assets/images/fizzi/logo-pink.png",
+    "name": "logo-pink.png",
+    "width": 3133,
+    "height": 1958,
+    "alpha": true,
+    "bytes": 135941
+  },
+  {
+    "url": "https://tristanraoult.com/assets/images/fizzi/logo-bw-1.png",
+    "name": "logo-bw-1.png",
+    "width": 3133,
+    "height": 1958,
+    "alpha": true,
+    "bytes": 126371
+  },
+  {
+    "url": "https://tristanraoult.com/assets/images/fizzi/logo-bw-2.png",
+    "name": "logo-bw-2.png",
+    "width": 3132,
+    "height": 1958,
+    "alpha": true,
+    "bytes": 122633
+  },
+  {
+    "url": "https://tristanraoult.com/assets/images/fizzi/mascot-sheet.png",
+    "name": "mascot-sheet.png",
+    "width": 6263,
+    "height": 5082,
+    "alpha": true,
+    "bytes": 830468
+  },
+  {
+    "url": "https://tristanraoult.com/assets/images/fizzi/mascot.png",
+    "name": "mascot.png",
+    "width": 3132,
+    "height": 2576,
+    "alpha": true,
+    "bytes": 337823
+  },
+  {
+    "url": "https://tristanraoult.com/assets/images/fizzi/mascot-flip.png",
+    "name": "mascot-flip.png",
+    "width": 3133,
+    "height": 2576,
+    "alpha": true,
+    "bytes": 282947
+  },
+  {
+    "url": "https://tristanraoult.com/assets/images/fizzi/illustrations.png",
+    "name": "illustrations.png",
+    "width": 6264,
+    "height": 6215,
+    "alpha": true,
+    "bytes": 1290901
+  },
+  {
+    "url": "https://tristanraoult.com/assets/images/fizzi/mascot-sticker.png",
+    "name": "mascot-sticker.png",
+    "width": 3132,
+    "height": 2547,
+    "alpha": true,
+    "bytes": 412005
+  },
+  {
+    "url": "https://tristanraoult.com/assets/images/fizzi/mascot-sticker-flip.png",
+    "name": "mascot-sticker-flip.png",
+    "width": 3133,
+    "height": 2547,
+    "alpha": true,
+    "bytes": 411201
+  },
+  {
+    "url": "https://tristanraoult.com/assets/images/fizzi/can-1-front.png",
+    "name": "can-1-front.png",
+    "width": 1915,
+    "height": 1915,
+    "alpha": true,
+    "bytes": 1811775
+  },
+  {
+    "url": "https://tristanraoult.com/assets/images/fizzi/can-1-back.png",
+    "name": "can-1-back.png",
+    "width": 1914,
+    "height": 1915,
+    "alpha": true,
+    "bytes": 1967616
+  },
+  {
+    "url": "https://tristanraoult.com/assets/images/fizzi/can-2-front.png",
+    "name": "can-2-front.png",
+    "width": 1915,
+    "height": 1914,
+    "alpha": true,
+    "bytes": 1842472
+  },
+  {
+    "url": "https://tristanraoult.com/assets/images/fizzi/can-2-back.png",
+    "name": "can-2-back.png",
+    "width": 1914,
+    "height": 1915,
+    "alpha": true,
+    "bytes": 1987382
+  },
+  {
+    "url": "https://tristanraoult.com/assets/images/fizzi/can-3-front.png",
+    "name": "can-3-front.png",
+    "width": 1915,
+    "height": 1914,
+    "alpha": true,
+    "bytes": 1873376
+  },
+  {
+    "url": "https://tristanraoult.com/assets/images/fizzi/can-3-back.png",
+    "name": "can-3-back.png",
+    "width": 1915,
+    "height": 1914,
+    "alpha": true,
+    "bytes": 2023807
+  },
+  {
+    "url": "https://tristanraoult.com/assets/images/fizzi/cans-group-2.png",
+    "name": "cans-group-2.png",
+    "width": 6264,
+    "height": 3497,
+    "alpha": true,
+    "bytes": 8783987
+  },
+  {
+    "url": "https://tristanraoult.com/assets/images/fizzi/pattern-1.png",
+    "name": "pattern-1.png",
+    "width": 3108,
+    "height": 2577,
+    "alpha": true,
+    "bytes": 295760
+  },
+  {
+    "url": "https://tristanraoult.com/assets/images/fizzi/pattern-2.png",
+    "name": "pattern-2.png",
+    "width": 3120,
+    "height": 2577,
+    "alpha": true,
+    "bytes": 280600
+  },
+  {
+    "url": "https://tristanraoult.com/assets/images/fizzi/mockup-poster.png",
+    "name": "mockup-poster.png",
+    "width": 6264,
+    "height": 4176,
+    "alpha": true,
+    "bytes": 45497913
+  },
+  {
+    "url": "https://tristanraoult.com/assets/images/fizzi/mockup-insta.png",
+    "name": "mockup-insta.png",
+    "width": 4707,
+    "height": 5665,
+    "alpha": true,
+    "bytes": 4923314
+  },
+  {
+    "url": "https://tristanraoult.com/assets/images/fizzi/mockup-totbag.png",
+    "name": "mockup-totbag.png",
+    "width": 3197,
+    "height": 3847,
+    "alpha": true,
+    "bytes": 9898254
+  },
+  {
+    "url": "https://tristanraoult.com/assets/images/fizzi/mockup-cap.png",
+    "name": "mockup-cap.png",
+    "width": 3197,
+    "height": 3847,
+    "alpha": true,
+    "bytes": 8564701
+  }
+]

@@ -1,0 +1,79 @@
+[
+  {
+    "id": "fizzi",
+    "title": "Fizzi",
+    "category": "Identité · Packaging",
+    "x": 962,
+    "y": 605,
+    "w": 61,
+    "h": 155,
+    "cx": 992,
+    "cy": 683
+  },
+  {
+    "id": "focus",
+    "title": "Focus",
+    "category": "Identité · Podcast",
+    "x": 1161,
+    "y": 750,
+    "w": 165,
+    "h": 105,
+    "cx": 1241,
+    "cy": 802
+  },
+  {
+    "id": "photography",
+    "title": "Photography",
+    "category": "Lumière · Photographie",
+    "x": 322,
+    "y": 481.5,
+    "w": 114,
+    "h": 95,
+    "cx": 382,
+    "cy": 525.5
+  },
+  {
+    "id": "gloomy",
+    "title": "Gloomy Graphic",
+    "category": "Identité personnelle",
+    "x": 63,
+    "y": 807,
+    "w": 205,
+    "h": 79,
+    "cx": 164,
+    "cy": 846
+  },
+  {
+    "id": "affiches",
+    "title": "Affiches",
+    "category": "Composition · Typographie",
+    "x": 1095,
+    "y": 0,
+    "w": 123,
+    "h": 228,
+    "cx": 1156,
+    "cy": 114
+  },
+  {
+    "id": "archives",
+    "title": "Archives",
+    "category": "Cours · Stage · Freelance",
+    "x": 440,
+    "y": 166,
+    "w": 86,
+    "h": 130,
+    "cx": 484,
+    "cy": 231
+  },
+  {
+    "id": "tv",
+    "title": "Motion & Montage",
+    "category": "Deux façons de raconter",
+    "x": 1515,
+    "y": 311,
+    "w": 325,
+    "h": 242,
+    "cx": 1676,
+    "cy": 432
+  }
+]

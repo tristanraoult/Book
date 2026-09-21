@@ -1,0 +1,101 @@
+{
+  "fair-8": {
+    "title": "Mouvement & ancrage",
+    "sub": "Un cercle en mouvement, une structure qui tient.",
+    "steps": [
+      [
+        "La trace du mouvement",
+        "Les lumières dessinent des arcs continus. Le cadrage garde presque toute la roue : sa rotation devient le sujet de l’image.",
+        "M 12 57 C 1 28 14 8 38 14 C 63 19 91 46 95 68",
+        [
+          18,
+          29
+        ]
+      ],
+      [
+        "Un point fixe",
+        "Les supports restent lisibles au milieu des traînées. Leur convergence vers le moyeu donne un point d’ancrage au regard.",
+        "M 34 84 L 68 47 L 94 73 M 68 47 L 72 92",
+        [
+          68,
+          47
+        ]
+      ],
+      [
+        "Garder le lieu",
+        "Les stands occupent le bas du cadre. Ils donnent une échelle à la roue et rattachent le mouvement à la fête.",
+        "M 3 83 Q 29 87 50 86 T 97 89",
+        [
+          22,
+          90
+        ]
+      ]
+    ]
+  },
+  "kodak-2": {
+    "title": "Cadrage & profondeur",
+    "sub": "Traverser la ville du regard.",
+    "steps": [
+      [
+        "Un cadre dans le cadre",
+        "J’utilise les façades pour refermer les côtés de l’image. La rue devient un passage visuel vers la flèche.",
+        "M 8 10 L 9 41 L 42 72 M 76 5 L 76 57 L 65 72",
+        [
+          12,
+          40
+        ]
+      ],
+      [
+        "Plusieurs plans",
+        "Je laisse le tram et la signalisation au premier plan. Les arbres puis le monument prolongent cette succession : la ville reste présente.",
+        "M 4 80 Q 24 75 37 82 M 38 63 Q 55 54 63 62 M 44 38 Q 50 35 56 38",
+        [
+          26,
+          82
+        ]
+      ],
+      [
+        "Un axe qui stabilise",
+        "Je place la flèche près de l’axe central. Sa verticale structure une scène où beaucoup d’éléments se croisent.",
+        "M 51 73 Q 51 48 51 9",
+        [
+          51,
+          14
+        ]
+      ]
+    ]
+  },
+  "exterior-3": {
+    "title": "Cadre & lumière",
+    "sub": "Faire exister un instant discret.",
+    "steps": [
+      [
+        "Une ouverture",
+        "Les piliers ferment les côtés ; le premier plan flou referme le haut et la gauche. Cette ouverture concentre le regard sur la scène.",
+        "M 21 20 L 21 83 L 74 83 M 72 18 L 72 71",
+        [
+          23,
+          31
+        ]
+      ],
+      [
+        "Le point lumineux",
+        "Le visage et les cheveux se détachent sur le feuillage sombre. Ce contraste attire l’œil vers la personne assise, sans effacer le lieu.",
+        "M 60 76 Q 58 73 61 71 Q 65 69 68 73 L 70 78",
+        [
+          65,
+          73
+        ]
+      ],
+      [
+        "L’espace autour",
+        "La personne reste petite dans le cadre. La hauteur des piliers et l’étendue du feuillage donnent de l’espace à cet instant calme.",
+        "M 30 25 L 61 25 M 30 25 L 30 57 M 61 25 L 61 57",
+        [
+          43,
+          40
+        ]
+      ]
+    ]
+  }
+}

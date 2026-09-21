@@ -1,0 +1,83 @@
+[
+  {
+    "id": "nike",
+    "title": "Nike",
+    "category": "Typographie · matière",
+    "color": "#83629c",
+    "i": 0,
+    "original": "nike.png",
+    "web": "nike.webp"
+  },
+  {
+    "id": "clouds",
+    "title": "Daydream",
+    "category": "Clouds · collage",
+    "color": "#9a9cbe",
+    "i": 1,
+    "original": "clouds.png",
+    "web": "clouds.webp"
+  },
+  {
+    "id": "fish",
+    "title": "Dreamers",
+    "category": "Fish · composition",
+    "color": "#4798ae",
+    "i": 2,
+    "original": "fish.png",
+    "web": "fish.webp"
+  },
+  {
+    "id": "joker",
+    "title": "Joker",
+    "category": "Cinéma · portrait",
+    "color": "#727b89",
+    "i": 3,
+    "original": "joker.png",
+    "web": "joker.webp"
+  },
+  {
+    "id": "flower",
+    "title": "Flowers",
+    "category": "Flower · contraste",
+    "color": "#c49b41",
+    "i": 4,
+    "original": "flower.png",
+    "web": "flower.webp"
+  },
+  {
+    "id": "robot",
+    "title": "Dreams",
+    "category": "Robot · illustration",
+    "color": "#739b75",
+    "i": 5,
+    "original": "robot.png",
+    "web": "robot.webp"
+  },
+  {
+    "id": "zoologie",
+    "title": "Zoologie",
+    "category": "Illustration · nomenclature",
+    "color": "#b5a07b",
+    "i": 6,
+    "original": "zoologie.png",
+    "web": "zoologie.webp"
+  },
+  {
+    "id": "sand",
+    "title": "Wandering Souls",
+    "category": "Sand · affiche de cinéma",
+    "color": "#639b8a",
+    "i": 7,
+    "original": "sand.jpg",
+    "web": "sand.webp"
+  },
+  {
+    "id": "sand-rose",
+    "title": "Wandering Souls — rose",
+    "category": "Sand Rose · variation",
+    "color": "#b87e99",
+    "i": 8,
+    "original": "sand-rose.jpg",
+    "web": "sand-rose.webp"
+  }
+]

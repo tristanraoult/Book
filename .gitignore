@@ -1,0 +1,23 @@
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+.DS_Store
+$RECYCLE.BIN/
+
+optix7cache.db
+
+work/v4/deps/
+
+outputs/V15_Archives/videos/nouveau_F.mp4
+outputs/V15_Archives/videos/juriactes.mp4
+
+# Local work and safety copies are not part of the publishable portfolio.
+.serena/
+work/
+outputs/Backup_*/
+_site/
+
+# Original production files stay local. Web-optimized equivalents are published.
+outputs/V16_Studio/archives/videos/
+outputs/V16_Studio/**/*.blend
+outputs/V16_Studio/**/*.blend1
