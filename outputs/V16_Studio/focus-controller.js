@@ -21,7 +21,7 @@ export async function createFocusController({container,stage,getState,wake,onFir
  const room=new RoomEnvironment(),pmrem=new THREE.PMREMGenerator(renderer),environment=pmrem.fromScene(room,.04);scene.environment=environment.texture;room.dispose();pmrem.dispose();
  scene.add(new THREE.HemisphereLight(0xffe2be,0x201421,1.25));
  for(const [color,intensity,x,y,z] of [[0xfff2dd,3,-2,3,3],[0xffa45b,2,2,1,-1],[0xb493d3,1,-2,0,-1]]){const light=new THREE.DirectionalLight(color,intensity);light.position.set(x,y,z);scene.add(light);}
- const gltf=await new GLTFLoader().loadAsync('../sources/Focus_web_lossless.glb');
+ const gltf=await new GLTFLoader().loadAsync('sources/Focus_web_lossless.glb');
  const {parts,scale}=prepareFocus(gltf.scene),sim=createFocusWorld(parts,scale);
  for(const p of parts)root.add(p.group);
  // The old study had a floor; this header suspends Focus in open space.

@@ -1,5 +1,5 @@
 V16 — nouvelle version locale
-Ouvrir sur ce PC : http://127.0.0.1:8778/prototype/
-Sur le téléphone, même Wi-Fi : http://192.168.1.150:8778/prototype/
-Lancer si nécessaire : node prototype/server.cjs depuis ce dossier.
+Ouvrir sur ce PC : http://127.0.0.1:8778/
+Sur le téléphone, même Wi-Fi : http://192.168.1.150:8778/
+Lancer si nécessaire : node server.cjs depuis ce dossier.
 La V15 reste disponible sur 8777. Backup indépendant : ../Backup_V15_2026-09-21.

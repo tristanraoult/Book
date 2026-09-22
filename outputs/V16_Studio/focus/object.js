@@ -1,8 +1,8 @@
 import * as THREE from 'three';
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 import { RoomEnvironment } from 'three/addons/environments/RoomEnvironment.js';
-import { prepareFocus } from '../prototype/focus-model.js';
-import { createFocusWorld, PHYSICS_STEP } from '../prototype/focus-world.js';
+import { prepareFocus } from '../focus-model.js';
+import { createFocusWorld, PHYSICS_STEP } from '../focus-world.js';
 
 const clamp=(x,a=0,b=1)=>Math.max(a,Math.min(b,x));
 const smooth=(a,b,x)=>{const t=clamp((x-a)/(b-a));return t*t*(3-2*t);};

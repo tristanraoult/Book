@@ -8,7 +8,7 @@ const source = resolve(root, 'outputs', 'V16_Studio');
 const target = resolve(root, '_site');
 const excluded = new Set([
   'archives/videos',
-  'prototype/server.cjs',
+  'server.cjs',
   'LIRE_MOI_V16.txt',
 ]);
 
@@ -35,7 +35,7 @@ cpSync(source, target, {
 
 // Reproduce the source server's legacy routes as static redirects, under any
 // Pages project prefix. The working version is never edited by this build.
-const sourceServer = readFileSync(resolve(source, 'prototype/server.cjs'), 'utf8');
+const sourceServer = readFileSync(resolve(source, 'server.cjs'), 'utf8');
 const aliasLiteral = sourceServer.match(/const aliases=(\{[^;]+\});/);
 if (!aliasLiteral) throw new Error('Source server routes were not found.');
 const aliases = JSON.parse(aliasLiteral[1].replaceAll("'", '"'));
