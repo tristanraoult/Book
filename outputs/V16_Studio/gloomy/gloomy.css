@@ -10,6 +10,7 @@
 .build-art .eye-layer{opacity:0}.construction[data-step="3"] .eye-layer{opacity:1}
 
 /* Targeted Gloomy corrections; retired sections remain in restored-backup. */
+.live-logo{touch-action:none}
 .live-logo .eye-layer{object-fit:contain;overflow:hidden;visibility:hidden}
 .live-logo.eye-ready .eye-layer{visibility:visible}
 .live-logo.eye-ready>img{visibility:hidden}

@@ -3,6 +3,12 @@
 const reduce=matchMedia('(prefers-reduced-motion:reduce)');
 const apertures=[{x:916,y:431,r:143.5},{x:1256,y:431,r:143.5}];
 const eyes=[];let frame=0;
+// Rest pose measured from assets/sticker.png: pupils sit right/down from the
+// eye centre, edge touching the black ring. Same direction as the sticker,
+// pushed out to the same clamp `paint()` uses so it just reaches the ring.
+function rest(e){const hero=!!e.logo.closest('.hero, .finale'),radius=hero?82:78;
+ const limit=(hero?60:143.5-radius-2)-1,ux=.7172,uy=.6967;
+ return{x:limit*ux,y:limit*uy};}
 function mask(ctx,eye){ctx.beginPath();ctx.arc(eye.x,eye.y,eye.r,0,Math.PI*2);ctx.clip();}
 function paint(e){
  const ctx=e.canvas.getContext('2d');ctx.clearRect(0,0,2300,1520);
@@ -27,8 +33,8 @@ function tick(){frame=0;let moving=false;
  if(moving&&!document.hidden&&!reduce.matches)frame=requestAnimationFrame(tick);
 }
 function wake(){if(!frame&&!document.hidden)frame=requestAnimationFrame(tick);}
-function neutral(immediate=false){for(const e of eyes){e.tx=e.ty=0;if(immediate){e.x=e.y=0;paint(e);e.logo.dataset.eyeX=e.logo.dataset.eyeY='0';}}if(!immediate)wake();}
-const observer=new IntersectionObserver(entries=>{for(const entry of entries){const e=eyes.find(e=>e.logo===entry.target);if(!e)continue;e.visible=entry.isIntersecting;if(!e.visible){e.x=e.y=e.tx=e.ty=0;paint(e);}}});
+function neutral(immediate=false){for(const e of eyes){const p=rest(e);e.tx=p.x;e.ty=p.y;if(immediate){e.x=p.x;e.y=p.y;paint(e);e.logo.dataset.eyeX=e.x;e.logo.dataset.eyeY=e.y;}}if(!immediate)wake();}
+const observer=new IntersectionObserver(entries=>{for(const entry of entries){const e=eyes.find(e=>e.logo===entry.target);if(!e)continue;e.visible=entry.isIntersecting;if(!e.visible){const p=rest(e);e.x=e.tx=p.x;e.y=e.ty=p.y;paint(e);}}});
 document.querySelectorAll('.live-logo').forEach(async logo=>{
  const image=logo.querySelector('img'),canvas=logo.querySelector('canvas');
  try{await image.decode();}catch{return;}
@@ -37,7 +43,7 @@ document.querySelectorAll('.live-logo').forEach(async logo=>{
   base=document.createElement('canvas');base.width=2300;base.height=1520;
   const ink=base.getContext('2d');ink.drawImage(image,0,0);ink.globalCompositeOperation='source-in';ink.fillStyle='#090909';ink.fillRect(0,0,2300,1520);
  }
- const e={logo,image,base,canvas,x:0,y:0,tx:0,ty:0,visible:false};eyes.push(e);paint(e);logo.classList.add('eye-ready');observer.observe(logo);
+ const e={logo,image,base,canvas,x:0,y:0,tx:0,ty:0,visible:false};const p=rest(e);e.x=e.tx=p.x;e.y=e.ty=p.y;eyes.push(e);paint(e);logo.classList.add('eye-ready');observer.observe(logo);
 });
 function follow(event){if(reduce.matches)return;
  for(const e of eyes){if(!e.visible)continue;

@@ -1,6 +1,6 @@
 const http=require('node:http'),fs=require('node:fs'),path=require('node:path');
 const root=path.resolve(__dirname);
-const mime={'.html':'text/html; charset=utf-8','.js':'text/javascript','.css':'text/css','.webp':'image/webp','.svg':'image/svg+xml','.png':'image/png','.jpg':'image/jpeg','.glb':'model/gltf-binary','.mp4':'video/mp4','.gif':'image/gif','.json':'application/json'};
+const mime={'.html':'text/html; charset=utf-8','.js':'text/javascript','.css':'text/css','.webp':'image/webp','.svg':'image/svg+xml','.png':'image/png','.jpg':'image/jpeg','.glb':'model/gltf-binary','.mp4':'video/mp4','.gif':'image/gif','.json':'application/json','.pdf':'application/pdf'};
 http.createServer((req,res)=>{
  let relative;try{relative=decodeURIComponent(new URL(req.url,'http://127.0.0.1').pathname);}catch{res.writeHead(400).end();return;}
  const aliases={'/owlblack/':'/stage/','/owlblack':'/stage/','/projects/stage.html':'/stage/','/projects/owlblack.html':'/stage/','/projects/cours.html':'/cours/','/projects/freelance.html':'/freelance/','/projects/archives.html':'/archives/','/cours.html':'/cours/','/stage.html':'/stage/','/freelance.html':'/freelance/','/archives.html':'/archives/','/slipknot/':'/cours/#slipknot','/chippys/':'/cours/#chippys','/saucette/':'/cours/#saucette','/affiches-insta/':'/cours/#triptyque'};if(aliases[relative]){res.writeHead(302,{Location:aliases[relative]}).end();return;}

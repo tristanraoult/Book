@@ -9,3 +9,8 @@
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation:none!important;transition:none!important}.reveal{opacity:1!important;transform:none!important}.mascot-button,.mascot-button img{transform:none!important}.can-story{height:100svh;min-height:660px}}
 .nav{background:var(--paper)}
 .brand-insta figcaption{text-align:center}
+/* On this page's near-white background, mix-blend-mode:difference against the
+   default off-white header turns it near-black. Using a color whose difference
+   against --paper lands on --ink keeps the same reactive contrast (still reacts
+   to photos/dark sections) but reads as Fizzi's own teal instead of deep black. */
+body>.header-logo,body>.desktop-nav{color:#d4a192!important}
