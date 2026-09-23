@@ -1,6 +1,6 @@
 const $=s=>document.querySelector(s),hero=$('.hero'),stage=$('#hero-stage'),object=$('#object'),reduce=matchMedia('(prefers-reduced-motion:reduce)');let controller,raf=0,last=0,awakeUntil=0,visible=true,failed=false;
 const state={progress:0,ratio:innerWidth<=600?'9x16':'16x9',showModel:true,staticMode:false,reduced:reduce.matches};
-function update(){state.progress=reduce.matches?0:Math.max(0,Math.min(1,-hero.getBoundingClientRect().top/Math.max(1,hero.offsetHeight-innerHeight)));hero.style.setProperty('--p',state.progress);$('#phase').textContent=state.progress<.4?'01 / SUSPENDU':'02 / EN APESANTEUR';}
+function update(){state.progress=reduce.matches?0:Math.max(0,Math.min(1,-hero.getBoundingClientRect().top/Math.max(1,hero.offsetHeight-innerHeight)));hero.style.setProperty('--p',state.progress);}
 function wake(){awakeUntil=performance.now()+4500;if(!raf&&visible&&!document.hidden&&!failed){last=performance.now();raf=requestAnimationFrame(tick);}}
 function tick(now){raf=0;update();controller?.tick(Math.min((now-last)/1000,.035),now);last=now;if(controller&&visible&&!document.hidden&&!failed&&!reduce.matches&&(now<awakeUntil||controller.held))raf=requestAnimationFrame(tick);}
 function fallback(){failed=true;hero.classList.add('is-fallback');cancelAnimationFrame(raf);raf=0;object.classList.remove('ready');object.querySelector('canvas')?.remove();$('#grab-hint').textContent='Le porte-clé Focus · vue originale';object.dataset.fallback='true';}
@@ -14,6 +14,6 @@ const gaze=$('.gaze-stage');gaze.addEventListener('pointermove',e=>{if(reduce.ma
 const wave=$('.wave');for(let i=0;i<45;i++){const b=document.createElement('i');b.style.setProperty('--h',`${12+Math.abs(Math.sin(i*1.8)*Math.cos(i*.23))*78}px`);b.style.setProperty('--delay',`${-i*.11}s`);wave.append(b);}let audioTimer;function stopAudio(){clearTimeout(audioTimer);$('.audio-module').classList.remove('playing');$('#audio-demo').setAttribute('aria-pressed','false');$('#audio-demo').textContent='▶';$('#audio-status').textContent='Démo visuelle silencieuse';}
 $('#audio-demo').addEventListener('click',()=>{if($('#audio-demo').getAttribute('aria-pressed')==='true'){stopAudio();return;}$('.audio-module').classList.add('playing');$('#audio-demo').setAttribute('aria-pressed','true');$('#audio-demo').textContent='Ⅱ';$('#audio-status').textContent='Animation uniquement · aucun son';audioTimer=setTimeout(stopAudio,8000);});new IntersectionObserver(es=>{if(!es[0].isIntersecting)stopAudio();}).observe($('.audio-module'));
 
-// Local screenshot explorer: works without the external site's iframe support.
-const previewButton=document.querySelector('#site-live'),preview=document.querySelector('#focus-site-view');
-previewButton.addEventListener('click',()=>{const zoom=previewButton.getAttribute('aria-pressed')!=='true';previewButton.setAttribute('aria-pressed',String(zoom));preview.classList.toggle('is-zoomed',zoom);previewButton.textContent=zoom?'Vue d’ensemble':'Agrandir l’aperçu';document.querySelector('#site-help').textContent=zoom?'Faites défiler verticalement et horizontalement pour explorer les détails.':'Deux vues réelles du site. Faites défiler ou agrandissez pour lire les détails.';});
+// Real Focus site embedded live below: load it only once it nears the viewport.
+const siteFrame=document.querySelector('#focus-site-frame');
+if(siteFrame)new IntersectionObserver((es,obs)=>{if(es[0].isIntersecting){siteFrame.src=siteFrame.dataset.src;obs.disconnect();}},{rootMargin:'400px'}).observe(siteFrame);
