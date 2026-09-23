@@ -88,7 +88,7 @@ function buildMobileStudio(){
   const l=layers.find(n=>n.id===link.dataset.open);if(!l)return;
   const margin=18;const art=el('svg',{viewBox:[l.x-margin,l.y-margin,l.w+margin*2,l.h+margin*2].join(' '),'aria-hidden':'true',class:'directory-object'});
   art.append(el('image',{href:l.id==='tv'?'atelier/decor-clean-2048.webp':'atelier/'+l.id+'.webp',width:2048,height:1152}));
-  link.prepend(art);link.setAttribute('aria-label',l.title+' — '+l.category);const sub=document.createElement('small');sub.textContent=l.category;link.append(sub);
+  link.prepend(art);link.setAttribute('aria-label',l.title+' - '+l.category);const sub=document.createElement('small');sub.textContent=l.category;link.append(sub);
  });
 
 }
