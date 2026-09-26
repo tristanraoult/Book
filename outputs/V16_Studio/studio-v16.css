@@ -36,3 +36,17 @@
 @media(max-width:700px){#mobile-focus-hint{bottom:11%}}
 /* Short pinned mobile reveal, with native document scrolling. */
 @media(max-width:700px){#journey{height:240svh}#stage{position:sticky;top:0}.is-static #journey{height:100svh}}
+/* Home arrival: reuse the actual room, with a restrained reversible camera move. */
+#studio-bridge{position:absolute;inset:0;display:block;opacity:0;pointer-events:none;transform-origin:50% 55%}
+#studio-bridge img{width:100%;height:100%;object-fit:cover}
+@media(max-width:700px){
+ .mobile-welcome{position:relative;isolation:isolate;overflow:hidden;min-height:0;padding:72px 24px 80px!important;background:#20150f}
+ .mobile-welcome::before{content:"";position:absolute;z-index:-2;inset:-30px 0;background:url('atelier/studio-portrait.webp') center 47%/cover no-repeat;transform:translateY(var(--welcome-shift,0px)) scale(1.04);pointer-events:none}
+ .mobile-welcome::after{content:"";position:absolute;z-index:-1;inset:0;background:linear-gradient(180deg,#20150f55,#20150fdb 25%,#20150fe8 78%,#20150f);pointer-events:none}
+ .mobile-welcome h1{max-width:340px;text-shadow:0 2px 24px #140b08}
+ .mobile-welcome>.eyebrow{margin-bottom:14px}
+ .mobile-welcome>p:not(.eyebrow){margin:8px 0;color:#f1e2d2}
+ .mobile-welcome .welcome-studio{margin-top:16px!important}
+ .mobile-welcome>.explore-cta{margin-top:24px}
+}
+@media(prefers-reduced-motion:reduce){#studio-bridge{display:none}.mobile-welcome::before{transform:none}}

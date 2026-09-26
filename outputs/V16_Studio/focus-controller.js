@@ -28,7 +28,7 @@ export async function createFocusController({container,stage,getState,wake,onFir
  const floor=sim.world.bodies.find(b=>b.shapes.some(s=>s.constructor.name==='Plane'));if(floor)floor.position.y=-8;
  const pendant=parts[8].group,raycaster=new THREE.Raycaster(),pointer=new THREE.Vector2(),plane=new THREE.Plane(),point=new THREE.Vector3();
  let held=false,pending=null,active=-1,pathProgress=getState().progress,opacity=1,firstGrab=false,lastDiagnostics=0,aspect=1,lastCost=0;
- const projected=new THREE.Vector3();
+ const projected=new THREE.Vector3();let arrivalTime=0;
  function interactive(){const s=getState();return !s.staticMode&&s.showModel&&opacity>.2;}
  function ray(e){const r=canvas.getBoundingClientRect();pointer.set((e.clientX-r.left)/r.width*2-1,1-(e.clientY-r.top)/r.height*2);root.updateMatrixWorld(true);raycaster.setFromCamera(pointer,camera);}
  function hit(e){if(!interactive())return null;ray(e);return raycaster.intersectObject(pendant,true)[0]||null;}
@@ -55,7 +55,11 @@ export async function createFocusController({container,stage,getState,wake,onFir
  function tick(dt,now){const s=getState();if(s.staticMode||!s.showModel){release();container.style.opacity='0';container.style.pointerEvents='none';renderer.clear();return false;}
   if(!held)pathProgress+=(s.progress-pathProgress)*(1-Math.exp(-dt*4.5));
   const pose=doorPose(pathProgress,s.ratio==='9x16',aspect);opacity=pose.opacity;
-  root.position.set(pose.x,pose.y,pose.z);root.scale.setScalar(pose.scale);root.rotation.set(0,pose.rotation,0);
+  // Finish immediately on interaction or scroll so arrival never fights the hand.
+  arrivalTime=held||s.progress>.015?1.1:Math.min(1.1,arrivalTime+dt);
+  const arriving=1-smooth(0,1.1,arrivalTime);
+  opacity*=1-arriving;
+  root.position.set(pose.x,pose.y+.18*arriving,pose.z);root.scale.setScalar(pose.scale);root.rotation.set(0,pose.rotation,-.065*arriving);
   container.style.opacity=String(opacity);container.style.pointerEvents=opacity>.2?'auto':'none';
   const start=performance.now();
   if(opacity>.001&&!document.hidden){sim.world.step(PHYSICS_STEP,dt,9);for(let i=0;i<parts.length;i++){parts[i].group.position.copy(sim.bodies[i].position);parts[i].group.quaternion.copy(sim.bodies[i].quaternion);}renderer.render(scene,camera);}

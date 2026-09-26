@@ -22,6 +22,18 @@ function seek(v,t){if(v.readyState<2||!Number.isFinite(v.duration)||v.seeking)re
 function requestFrame(){if(!frame)frame=requestAnimationFrame(render);}
 function render(now){
  frame=0;const dt=Math.min((now-lastFrame)/1000,.05)||.016;lastFrame=now;
+ // Reversible camera handoff, using the same room assets and native scroll.
+ const bridge=smooth(.82,1,progress),welcome=document.querySelector('.mobile-welcome');
+ $('studio-bridge').style.opacity=staticMode?'0':String(smooth(.4,.6,bridge));
+ $('studio-bridge').style.transform=`scale(${1.065-.065*bridge})`;
+ // A short shadow passage avoids overlapping two different room perspectives.
+ $('studio-bridge').style.filter=`brightness(${.08+.92*smooth(.5,1,bridge)})`;
+ videos[1].style.filter=`brightness(${1-.92*smooth(0,.5,bridge)})`;
+ document.querySelector('.focus-scroll').style.opacity=String(1-smooth(.05,.2,progress));
+ document.querySelector('.focus-scroll').inert=progress>.2;
+ $('mobile-focus-hint').style.opacity=firstInteraction?'0':String(1-smooth(.05,.2,progress));
+ const welcomeProgress=clamp((innerHeight-welcome.getBoundingClientRect().top)/(innerHeight+welcome.offsetHeight));
+ welcome.style.setProperty('--welcome-shift',`${staticMode?0:24-48*welcomeProgress}px`);
  if(staticMode){controller?.tick(dt,now);return;}
  const p=progress,first=p<=.52,local=first?p/.52:(p-.52)/.48;
  const v=videos[first?0:1];seek(v,local*5);if(!first)seek(videos[0],5);
