@@ -1,4 +1,4 @@
-import { createFocusController } from './focus-controller.js';
+import { createFocusController } from './focus-controller.js?v=home-arrival-1';
 
 const $=id=>document.getElementById(id),stage=$('stage'),journey=$('journey'),still=$('still');
 const videos=[$('reveal'),$('enter')], mq=matchMedia('(prefers-reduced-motion: reduce)'),coarse=matchMedia('(pointer: coarse)');
