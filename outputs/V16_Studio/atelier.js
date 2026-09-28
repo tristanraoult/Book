@@ -3,7 +3,7 @@ const $=id=>document.getElementById(id),section=$('atelier'),svg=$('room-svg'),w
 const NS='http://www.w3.org/2000/svg',reduce=matchMedia('(prefers-reduced-motion: reduce)'),touch=matchMedia('(any-pointer: coarse)');
 const highResolution=innerWidth<701||innerWidth*devicePixelRatio>2048;
 const layerSuffix=highResolution?'':'-2048';
-function frameObject(l){if(innerWidth<701){const target=$('mobile-studio').querySelector('.scene-object[data-id="'+l.id+'"]');target?.parentElement.scrollIntoView({block:'center',behavior:reduce.matches?'instant':'smooth'});}}
+function frameObject(l){if(section.closest('#stage'))return;if(innerWidth<701){const target=$('mobile-studio').querySelector('.scene-object[data-id="'+l.id+'"]');target?.parentElement.scrollIntoView({block:'center',behavior:reduce.matches?'instant':'smooth'});}}
 const project={
  fizzi:{title:'Fizzi',category:'Identité · Packaging',slug:'fizzi',image:'originaux/fizzi-can.png',text:'Une boisson pétillante, une mascotte et trois canettes. Des formes souples et une palette rétro, déclinées du packaging aux supports de communication.'},
  focus:{title:'Focus',category:'Identité · Podcast',slug:'focus',image:'atelier/focus-table.png',text:'L’identité d’un podcast co-créé avec Loli Martinez pour mettre en lumière les parcours créatifs. Un lettrage organique et une paire d’yeux composent sa signature. Le podcast est en développement.'},
@@ -56,7 +56,7 @@ $('reveal-objects').addEventListener('click',()=>reveal(true));$('zoom-room').ad
 win.addEventListener('pointerdown',()=>{if(timers.length)stopReveal();},{passive:true});
 win.addEventListener('wheel',()=>{if(timers.length)stopReveal();},{passive:true});
 new IntersectionObserver(entries=>{if(entries[0].isIntersecting)load();},{rootMargin:'600px'}).observe(section);
-new IntersectionObserver(entries=>{const inView=entries[0].isIntersecting;document.body.classList.toggle('at-atelier',inView);if(inView&&innerWidth>=701&&(touch.matches||innerWidth<1025))reveal();else if(!inView)stopReveal();},{threshold:.25}).observe(win);
+new IntersectionObserver(entries=>{const inView=entries[0].isIntersecting;document.body.classList.toggle('at-atelier',inView);if(inView&&section.dataset.interactive!=='false'&&innerWidth>=701&&(touch.matches||innerWidth<1025))reveal();else if(!inView)stopReveal();},{threshold:.25}).observe(win);
 reduce.addEventListener('change',()=>{if(reduce.matches)stopReveal();});document.addEventListener('visibilitychange',()=>{if(document.hidden)stopReveal();});
 
 

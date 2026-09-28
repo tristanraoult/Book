@@ -11,7 +11,7 @@ export async function createCans(container){
  const pos=bodyGeometry.attributes.position,uv=bodyGeometry.attributes.uv;for(let i=0;i<pos.count;i++)uv.setY(i,THREE.MathUtils.clamp((pos.getY(i)+1.43)/2.86,0,1));
  const metal=new THREE.MeshStandardMaterial({color:0xc9d4d0,metalness:.92,roughness:.2,envMapIntensity:1.2}),darkMetal=new THREE.MeshStandardMaterial({color:0x8b9997,metalness:.85,roughness:.32,envMapIntensity:1.1}),purple=new THREE.MeshStandardMaterial({color:0x59467b,metalness:.48,roughness:.24,envMapIntensity:1});
  // Albedo deprojected from the six original renders; original files remain untouched.
- const maps=await Promise.all([2,3,1].map(n=>new THREE.TextureLoader().loadAsync(`assets/albedo-${n}.webp`)));const cans=[];
+ const maps=await Promise.all([2,3,1].map(n=>new THREE.TextureLoader().loadAsync(`assets/albedo-faithful-${n}.webp`)));const cans=[];
  const ringGeo=new THREE.TorusGeometry(.543,.028,8,64),lidGeo=new THREE.CylinderGeometry(.521,.521,.023,64),baseGeo=new THREE.CylinderGeometry(.51,.50,.037,48);
  for(let i=0;i<3;i++){
   const g=new THREE.Group();const tex=maps[i];tex.colorSpace=THREE.SRGBColorSpace;tex.wrapS=THREE.RepeatWrapping;tex.offset.x=.5;tex.anisotropy=Math.min(8,renderer.capabilities.getMaxAnisotropy());
