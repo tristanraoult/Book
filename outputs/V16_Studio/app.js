@@ -32,8 +32,8 @@ function render(now){
  passagePosition+=(passage-passagePosition)*(1-Math.exp(-dt*12));
  if(Math.abs(passage-passagePosition)<.0001)passagePosition=passage;
  const ready=atelier.dataset.loaded==='true';
- const handoff=staticMode?1:(ready?smooth(.88,.92,sequence):0);
- const titleOpacity=staticMode?0:smooth(.645,.68,sequence)*(1-smooth(.83,.88,sequence));
+ const handoff=staticMode?1:(ready?smooth(.79,.83,sequence):0);
+ const titleOpacity=staticMode?0:smooth(.645,.68,sequence)*(1-smooth(.74,.79,sequence));
  atelier.style.setProperty('--studio-opacity',handoff);
  atelier.style.setProperty('--title-opacity',titleOpacity);
  atelier.style.setProperty('--tools-opacity',Math.max(titleOpacity,handoff));

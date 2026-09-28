@@ -95,3 +95,16 @@ html.entry-loading #stage{visibility:hidden}
 
 .entry-mark img{animation:entry-logo 1.05s cubic-bezier(.2,.7,.3,1) both}@keyframes entry-logo{from{opacity:.45;transform:translateY(5px) scale(.96)}to{opacity:1;transform:none}}@media(prefers-reduced-motion:reduce){.entry-mark img{animation:none}}
 #stage #room-window,#stage #mobile-studio{grid-template-columns:minmax(0,1fr);grid-template-rows:minmax(0,1fr)}
+/* Compact editorial caption for the second studio passage only. */
+#stage .atelier-heading{left:5%;right:auto;top:auto;bottom:22%;transform:none;width:min(440px,42vw);margin:0;padding:22px 26px;border-left:1px solid #d9aa7755;background:linear-gradient(90deg,#170d087d, #170d0833 75%,transparent);text-shadow:0 2px 12px #100804}
+#stage .atelier-heading #atelier-title{font-size:clamp(28px,2.65vw,40px);line-height:1.08}
+#stage .atelier-heading .room-intro{margin:12px 0 0;font-size:12px;line-height:1.5}
+#stage .atelier-heading .room-kicker{margin-bottom:12px}
+@media(max-width:700px){
+ #stage .atelier-heading{left:22px;right:22px;bottom:24%;width:auto;max-width:300px;padding:16px 18px;background:linear-gradient(90deg,#170d0894,#170d0844 80%,transparent)}
+ #stage .atelier-heading #atelier-title{font-size:29px;max-width:245px;line-height:1.07}
+ #stage .atelier-heading .room-intro{font-size:11px;margin-top:10px;max-width:240px}
+}
+#stage #atelier[data-interactive="false"] .room-tools{left:5%;right:auto;width:auto;max-width:440px;background:transparent;padding:0;gap:10px;text-shadow:0 2px 10px #100804}
+#stage #atelier[data-interactive="false"] .room-tools button{background:#21181066;border-color:#ecddc844}
+@media(max-width:700px){#stage #atelier[data-interactive="false"] .room-tools{left:22px;right:22px;width:auto;bottom:24px;max-width:300px}}
